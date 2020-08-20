@@ -1,9 +1,9 @@
 ![alt text](laravel-ses.png "Laravel SES")
 
 # Laravel AWS Simple Email Service
-A Laravel package that allows you to get sending statistics for emails you send through AWS SES (Simple Email Service), 
+A Laravel package that allows you to get sending statistics for emails you send through AWS SES (Simple Email Service),
 including deliveries, opens, bounces, complaints and link tracking. This package was originally written by Oliveready7.
-Unfortunately the original author had stopped maintaining this package so I decided to create this fork so that this 
+Unfortunately the original author had stopped maintaining this package so I decided to create this fork so that this
 package can be used with current versions of Laravel. The minimum requirement is PHP 7.1.
 
 All packages have been updated to modern versions. I have optimized the original database
@@ -13,7 +13,7 @@ storage for space and proper indexing. This package is compatible with Laravel 6
 Install via composer
 
 ```
-composer require juhasev/laravel-ses
+composer require jubeki/laravel-ses
 composer require aws/aws-php-sns-message-validator (optional)
 ```
 
@@ -124,7 +124,7 @@ AWS CloudFormation policy example:
 
 ```
 
-Once policies are defined they need to added to the configured IAM user. 
+Once policies are defined they need to added to the configured IAM user.
 
 ```
   # AWS PHP API User
@@ -138,8 +138,8 @@ Once policies are defined they need to added to the configured IAM user.
 ```
 
 ### Running setup
-Make sure in your APP_URL (in .env) is set correctly, matching your sending domain. 
-If you do send email for multiple domains (i.e. multi tenant application) you can set multiple domains 
+Make sure in your APP_URL (in .env) is set correctly, matching your sending domain.
+If you do send email for multiple domains (i.e. multi tenant application) you can set multiple domains
 using this command.
 
 > You need to have SES domain ready before continuing
@@ -347,7 +347,7 @@ Example event data:
             [email] => bounce@simulator.amazonses.com
             [batch_id] => 7
             [sent_at] => 2020-04-03 19:42:31
-            [delivered_at] => 
+            [delivered_at] =>
             [batch] => Array
                 (
                     [id] => 7
@@ -407,4 +407,3 @@ To run unit tests execute
 ```bash
 phpunit
 ```
-
